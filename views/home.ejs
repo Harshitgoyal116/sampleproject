@@ -1,0 +1,10 @@
+<%- include("partials/header") %>
+
+    <h1>Welcome to home page</h1>
+    <% if(messages.success) { %>
+    <span style="color: green;"> <%= messages.success %> </span>
+    <% } %><br>
+
+   <button><a href="/sign-out">Logout</a></button>
+    
+   <%- include("partials/footer") %>

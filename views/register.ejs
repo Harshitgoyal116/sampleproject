@@ -1,0 +1,28 @@
+<%- include("partials/header") %>
+
+    <h1>Enter your details to register</h1>
+    <form class="" action="/register" method="post">
+      <p>
+        Username <input type="text" name="username" value="">
+      </p>
+      <p>
+        Name <input type="text" name="name" value="">
+      </p>
+      <p>
+        Password <input type="password" name="pass" value="">
+      </p>
+      <p>
+        Confirm Password <input type="password" name="cpass" value="">
+
+      </p>
+      <% if(messages.error) { %>
+      <span style="color: red;"> <%= messages.error %> </span>
+      <% } %><br>
+      <% if(messages.success) { %>
+      <span style="color: green;"> <%= messages.success %> </span>
+      <% } %><br>
+
+      <input type="submit" name="submit" value="Register">
+    </form>
+
+    <%- include("partials/footer") %>

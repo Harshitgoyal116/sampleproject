@@ -1,0 +1,16 @@
+<%- include("partials/header") %>
+
+    <h1>Welcome to Index Page</h1><br>
+    <form class="" action="/" method="post">
+      Username <br><br><input type="text" name="username" value="" required autofocus><br><br>
+      Password <br><br><input type="password" name="password" value=""><br><br>
+      <% if(messages.error) { %>
+      <span style="color: red;"> <%= messages.error %> </span>
+      <% } %><br>
+      <% if(messages.success) { %>
+      <span style="color: green;"> <%= messages.success %> </span>
+      <% } %><br>
+      <input type="submit" name="submit" value="Submit">
+    </form>
+
+<%- include("partials/footer") %>
